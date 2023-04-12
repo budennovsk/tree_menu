@@ -1,0 +1,17 @@
+{% load tags %}
+<li>
+
+    <a href={{ i.id }}>{% if i.is_main %} {{ i.name }}{% else %}{{ i.name }} {% endif %}
+</a>
+    <ul>
+        {% if i.children %}
+            {% if "/"|add:i.id|add:"/" in content.request.path %}
+                {% for child in i.children.all %}
+                    {% with i=child path=path|add:child.id|add:"/" template_name="tree_menu/menu_render_recursive.html" %}
+                        {% include template_name %}
+                    {% endwith %}
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+    </ul>
+</li>
