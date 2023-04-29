@@ -1,6 +1,16 @@
 FROM python:3.11-slim
 
+RUN mkdir code
+WORKDIR code
 
-SHELL ['/bin/bash', '-c']
+ADD . /code/
 
-ENV PYTHONUNBUFFERED 1
+
+ADD .env.docker /code/.env
+
+ENV APP_NAME=DOCKER_DEMO
+
+ 
+RUN pip install -r requirements.txt
+   
+CMD gunicorn menu.wsgi:application -b 0.0.0.0:8000
