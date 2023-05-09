@@ -6,7 +6,7 @@
 </ul>
 <br>
 <h3>Страница в развернутом в виде</h3>
-<img src="https://user-images.githubusercontent.com/97764479/231481165-287593c5-b605-4974-a473-04a0e5c09600.png.png" width=100% height=1000%>
+<img src="https://user-images.githubusercontent.com/97764479/231481165-287593c5-b605-4974-a473-04a0e5c09600.png" width=100% height=1000%>
 <br>
 
 
