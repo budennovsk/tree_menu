@@ -1,0 +1,4 @@
+.env
+.env.docker
+.idea/
+secret_key.py
